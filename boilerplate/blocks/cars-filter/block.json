@@ -1,0 +1,24 @@
+{
+  "name": "cars-filter",
+  "title": "Cars Filter",
+  "description": "Carousel with team members",
+  "style": [ "file:./assets/styles/augmentation-dev.css" ],
+  "category": "formatting",
+  "icon": "admin-users",
+  "keywords": ["car", "filter"],
+  "supports": {
+    "anchor": true,
+    "className": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "cars-filter.php"
+  },
+  "align": "full",
+  "viewScript": "cars-filter"
+
+}
