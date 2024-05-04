@@ -1,6 +1,6 @@
 {
-  "name": "cars-filter",
-  "title": "Cars Filter",
+  "name": "cars-filter-1",
+  "title": "Cars Filter-1",
   "description": "Carousel with team members",
   "style": [ "file:./assets/styles/main.css" ],
   "category": "formatting",
@@ -16,9 +16,9 @@
   },
   "acf": {
     "mode": "auto",
-    "renderTemplate": "cars-filter.php"
+    "renderTemplate": "cars-filter-1.php"
   },
   "align": "full",
-  "viewScript": "cars-filter"
+  "viewScript": "cars-filter-1"
 
 }
