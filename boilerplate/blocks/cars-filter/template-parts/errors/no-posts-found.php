@@ -1,1 +1,1 @@
-<h1>Error</h1>
+<strong>No posts found</strong>
