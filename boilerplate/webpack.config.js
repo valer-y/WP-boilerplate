@@ -1,8 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const getDirectories = source =>
     fs.readdirSync(source, { withFileTypes: true })
@@ -45,7 +43,6 @@ module.exports = (env, argv) => {
                 {
                     test: /\.scss$/,
                     use: [
-                        // MiniCssExtractPlugin.loader,
                         'style-loader',
                         'css-loader',
                         'sass-loader'
@@ -54,8 +51,6 @@ module.exports = (env, argv) => {
             ]
         },
         plugins: [
-            // new CleanWebpackPlugin(),
-            // new MiniCssExtractPlugin()
         ],
         optimization: {
             minimize: isProduction,

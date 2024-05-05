@@ -17,8 +17,8 @@ class BlocksRegister {
 		$this->blocksDir    = get_stylesheet_directory() .$blocksDirName;
 		$this->blocksDirUri = get_stylesheet_directory_uri() . $blocksDirName;
 
-		if(trim($this->savePointDirName)) {
-			$this->savePointDir = $blocksDirName . get_stylesheet_directory();
+		if(trim($this->savePointDirName) !== '') {
+			$this->savePointDir = get_stylesheet_directory() . $savePointDirName;
 			add_filter('acf/settings/save_json', [$this, 'acfJson_SavePoint']);
 			add_filter('acf/settings/load_json', [$this, 'acfJson_LoadPoint']);
 		}
@@ -68,7 +68,7 @@ class BlocksRegister {
 	final function acfJson_SavePoint(): string
 	{
 		$dirName = $this->savePointDir;
-		if(is_dir($dirName)) {
+		if(! is_dir($dirName)) {
 			mkdir($dirName);
 		}
 		return $this->savePointDir;
