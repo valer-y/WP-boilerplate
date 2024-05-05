@@ -21,7 +21,7 @@ $blocks = new BlocksRegister(
 function theme_setup(){
 
 	if ( wp_is_block_theme() || wp_theme_has_theme_json() ) {
-		add_theme_support( 'block-templates' );
+		add_theme_support( 'block-template-parts' );
 	}
 
 	add_theme_support('post-thumbnails');
