@@ -30,13 +30,31 @@ class BlocksRegister {
 
 	final function registerAcfBlocks(): void
 	{
-		$blocks = glob($this->blocksDir . '/*');
+		$blocks = glob("{$this->blocksDir}/*");
 		foreach ($blocks as $dir){
 			if(is_dir($dir)) {
-				$this->registerBlocksScripts($dir);
+//                var_dump($dir);
 
-				$blockJson = "{$dir}/block.json";
-				if(file_exists($blockJson)) {
+                if(is_dir("{$dir}/assets/js")) {
+                    $this->registerBlocksScripts($dir);
+                }
+
+                $ajax = "{$dir}/assets/ajax";
+                $file = glob("{$ajax}/*");
+//                var_dump(substr($file[0], -3, 3));
+                if(is_dir($ajax) && ! empty($file) && substr($file[0], -3, 3) ) {
+//                    var_dump($file);
+                    $filePath = str_replace(get_stylesheet_directory(), '', $file)[0];
+                    include __DIR__ . "/.." . $filePath;
+//                    echo "<br>";
+//                    var_dump($filePath);
+
+
+//                    $this->registerBlocksScripts($dir);
+                }
+
+
+				if(file_exists("{$dir}/block.json")) {
 					register_block_type($dir);
 					$this->blocks[] = basename($dir);
 				} else {

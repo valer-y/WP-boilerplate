@@ -7,6 +7,8 @@ $fmt = new NumberFormatter( 'de_DE', NumberFormatter::CURRENCY );
 $id = $args['id'] ?? '';
 $price = get_field('car_price', $id) ?? 'Цена не назначена';
 $taxonomies = get_post_taxonomies($id);
+
+if(! $id) return;
 ?>
 
 <div class="post-card">

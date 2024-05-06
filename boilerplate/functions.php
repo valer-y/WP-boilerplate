@@ -2,16 +2,17 @@
 
 require "vendor/autoload.php";
 require "inc/_inc.php";
+//include "blocks/cars-filter/assets/ajax/ajax.php";
 
-use App\Ajax\CarAjax\CarAjax;
+
 use App\BlocksRegister;
 use App\Cpt\CptRegister;
 use App\Taxonomy\TaxonomyRegister;
-//use App\Ajax\CarAjax;
+
 
 new TaxonomyRegister();
 new CptRegister();
-new CarAjax();
+
 
 $blocks = new BlocksRegister(
 	blocksDirName: '/blocks',
@@ -31,6 +32,5 @@ function theme_setup(){
 
 }
 add_action('after_setup_theme','theme_setup');
-
 
 

@@ -1,4 +1,6 @@
-import {test} from "./test";
+import {ajax} from "./ajax";
+import {priceSlider} from "./price-slider";
 import '../scss/main.scss';
 
-test();
+priceSlider();
+ajax();
