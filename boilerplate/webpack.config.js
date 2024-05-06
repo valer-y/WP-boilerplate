@@ -25,7 +25,7 @@ module.exports = (env, argv) => {
         mode: isProduction ? 'production' : 'development',
         entry: entry,
         output: {
-            filename: isProduction ? '[name]/dist/bundle.js' : '[name]/dist/bundle.js',
+            filename: isProduction ? '[name]/dist/[name]-bundle.js' : '[name]/dist/[name]-bundle.js',
             path: baseDir
         },
         module: {

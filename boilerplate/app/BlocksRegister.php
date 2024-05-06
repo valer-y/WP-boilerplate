@@ -49,8 +49,9 @@ class BlocksRegister {
 
 	final function registerBlocksScripts($block) : void
 	{
-		$jsonPath = 'dist/bundle.js';
-		$blockName = basename($block);
+        $blockName = basename($block);
+		$jsonPath = "dist/{$blockName}-bundle.js";
+//		$blockName = basename($block);
 		$jsFile = "{$block}/{$jsonPath}";
 
 		if(file_exists($jsFile)) {

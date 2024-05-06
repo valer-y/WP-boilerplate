@@ -57,6 +57,7 @@ $box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid gray;
 
     .image__wrapper {
+      user-select: none;
       object-fit: cover;
       max-height: 220px;
       display: flex;

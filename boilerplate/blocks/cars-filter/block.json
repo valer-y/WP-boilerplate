@@ -19,6 +19,6 @@
     "renderTemplate": "cars-filter.php"
   },
   "align": "full",
-  "viewScript": "cars-filter"
+  "viewScript": "cars-filter-bundle"
 
 }
