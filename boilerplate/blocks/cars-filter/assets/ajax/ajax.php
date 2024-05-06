@@ -36,22 +36,30 @@ function carsAjaxFunction()
         'brand' => $_POST['brand'] ?? '',
         'model' => $_POST['model'] ?? '',
         'year' => $_POST['year'] ?? '',
-//        'price' => $_POST['price']
-    ];
+        'price_from' =>$_POST['price_from'],
+        'price_to' =>$_POST['price_to'],
 
-//    var_dump($filters['price']);
+    ];
 
     $args = array(
         'post_type' => 'car',
         'tax_query' => [
             'relation' => 'AND',
         ],
-        'posts_per_page' => 4
+        'posts_per_page' => 4,
+        'meta_query' => [
+            'relation' => 'AND',
+            [
+                'value' => array($filters['price_from'], $filters['price_to']),
+                'type' => 'numeric',
+                'compare' => 'BETWEEN'
+            ]
+        ]
 
     );
 
     foreach ($filters as $filter => $value) {
-        if(! empty($value)) {
+        if(! empty($value) && $filter !== 'price_from' && $filter !== 'price_to') {
             $args['tax_query'][] = [
                 'taxonomy' => $filter,
                 'field'    => 'term_id',
@@ -59,6 +67,8 @@ function carsAjaxFunction()
             ];
         }
     }
+
+
 
     $query = new WP_Query( $args );
 
@@ -77,6 +87,7 @@ function carsAjaxFunction()
         get_template_part('blocks/cars-filter/template-parts/errors/no-posts','found');
         $response = ob_get_clean();
     }
+
 
     wp_reset_postdata();
 

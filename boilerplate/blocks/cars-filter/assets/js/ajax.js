@@ -54,6 +54,7 @@ export const ajax = () => {
         // find button
         button.addEventListener('click', () => {
             getPriceRange();
+            // console.log(priceFilterValue)
             sendCarFiltersData();
         })
         // show all button
@@ -73,6 +74,8 @@ export const ajax = () => {
             data.append('color', colorFilterValue);
             data.append('model', modelFilterValue);
             data.append('year', yearFilterValue);
+            data.append('price_from', priceFilterValue.price_from);
+            data.append('price_to', priceFilterValue.price_to);
 
             fetch(carsFilterObject.ajaxurl, {
                 method: 'POST',

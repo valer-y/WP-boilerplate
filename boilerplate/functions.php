@@ -2,8 +2,6 @@
 
 require "vendor/autoload.php";
 require "inc/_inc.php";
-//include "blocks/cars-filter/assets/ajax/ajax.php";
-
 
 use App\BlocksRegister;
 use App\Cpt\CptRegister;

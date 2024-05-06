@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 30%;
   position: relative;
-  top: 10px
+  top: -10px
   //margin: 35% auto;
 }
 
@@ -79,6 +79,11 @@ input[type="range"] {
   z-index: 1;
 }
 
-.form_control_container__time__input {
-  margin-top: 15px;
+.form_control_container {
+  margin-top: 25px;
+}
+
+.price-range__title {
+  margin-bottom: 15px;
+  text-align: center;
 }
