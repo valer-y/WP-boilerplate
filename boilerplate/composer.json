@@ -1,0 +1,15 @@
+{
+    "name": "valery/boilerplate",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Valery Yazykov",
+            "email": "valery.yazykov@interexy.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,110 @@
+{
+  "version": 3,
+  "settings": {
+    "color": {
+      "custom": false,
+      "text": true,
+      "background": true,
+      "palette": [
+        {
+          "slug": "primary",
+          "color": "#101018",
+          "name": "Primary"
+        },
+        {
+          "slug": "secondary",
+          "color": "#555555",
+          "name": "Secondary"
+        },
+        {
+          "slug": "white",
+          "color": "#ffffff",
+          "name": "White"
+        },
+        {
+          "slug": "active",
+          "color": "#6579f4",
+          "name": "Active"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Manrope\", sans-serif",
+          "slug": "main",
+          "name": "Main"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "xxl",
+          "size": "48px",
+          "name": "XXL"
+        },
+        {
+          "slug": "xl",
+          "size": "32px",
+          "name": "XL"
+        },
+        {
+          "slug": "l",
+          "size": "24px",
+          "name": "L"
+        },
+        {
+          "slug": "m",
+          "size": "18px",
+          "name": "M"
+        },
+        {
+          "slug": "s",
+          "size": "16px",
+          "name": "S"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "text": "var(--wp--preset--color--secondary)",
+      "background": "var(--wp--preset--color--white)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--main)"
+    },
+    "elements": {
+
+      "h1": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--xxl)"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--xl)"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--l)"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--m)"
+        }
+      },
+      "h5": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--m)"
+        }
+      },
+      "h6": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--m)"
+        }
+      }
+    }
+  }
+}
