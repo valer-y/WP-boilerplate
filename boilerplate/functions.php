@@ -1,7 +1,7 @@
 <?php
 
 require "vendor/autoload.php";
-require "inc/_inc.php";
+//require "inc/_inc.php";
 
 use App\BlocksRegister;
 use App\Cpt\CptRegister;
