@@ -33,7 +33,6 @@ class BlocksRegister {
 		$blocks = glob("{$this->blocksDir}/*");
 		foreach ($blocks as $dir){
 			if(is_dir($dir)) {
-//                var_dump($dir);
 
                 if(is_dir("{$dir}/assets/js")) {
                     $this->registerBlocksScripts($dir);
@@ -41,16 +40,9 @@ class BlocksRegister {
 
                 $ajax = "{$dir}/assets/ajax";
                 $file = glob("{$ajax}/*");
-//                var_dump(substr($file[0], -3, 3));
                 if(is_dir($ajax) && ! empty($file) && substr($file[0], -3, 3) ) {
-//                    var_dump($file);
                     $filePath = str_replace(get_stylesheet_directory(), '', $file)[0];
                     include __DIR__ . "/.." . $filePath;
-//                    echo "<br>";
-//                    var_dump($filePath);
-
-
-//                    $this->registerBlocksScripts($dir);
                 }
 
 
@@ -69,7 +61,6 @@ class BlocksRegister {
 	{
         $blockName = basename($block);
 		$jsonPath = "dist/{$blockName}-bundle.js";
-//		$blockName = basename($block);
 		$jsFile = "{$block}/{$jsonPath}";
 
 		if(file_exists($jsFile)) {

@@ -79,8 +79,12 @@ input[type="range"] {
   z-index: 1;
 }
 
-.form_control_container {
+.form_control {
   margin-top: 25px;
+}
+
+.form_control_container {
+  //margin-top: 25px;
 }
 
 .price-range__title {
