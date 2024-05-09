@@ -40,7 +40,6 @@ $car_taxonomies = get_object_taxonomies('car') ?? '';
                 </div>
 
             <?php endif;
-
         endforeach;
             get_template_part($block_path . '/template-parts/price', 'slider');
         endif; ?>

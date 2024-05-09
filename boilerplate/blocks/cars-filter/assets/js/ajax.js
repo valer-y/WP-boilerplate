@@ -8,7 +8,6 @@ export const ajax = () => {
         const colorFilter = document.getElementById("car__color-filter");
         const modelFilter = document.getElementById("car__model-filter");
         const yearFilter = document.getElementById("car__year-filter");
-        const priceRange = document.querySelector(".price-range");
 
         let colorFilterValue = '';
         let brandFilterValue = '';
@@ -17,7 +16,6 @@ export const ajax = () => {
         let priceFilterValue = '';
         const button = carsFilterForm.querySelector('.find-cars');
         const showAllButton = carsFilterForm.querySelector('.show-all-cars');
-        console.log(priceRange);
 
         function getPriceRange() {
 
