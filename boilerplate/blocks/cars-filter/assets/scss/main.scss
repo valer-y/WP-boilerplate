@@ -1,10 +1,6 @@
 //@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import "price-slider";
 
-$primary-color: #2fa8cc;
-$secondary-color: #f4f4f4;
-$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -39,11 +35,19 @@ $box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border-radius: 5px;
     border: unset;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .filter__wrapper {
     display: flex;
     flex-direction: column;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     .filter {
       & > option {

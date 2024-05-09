@@ -1,7 +1,7 @@
 {
   "name": "cars-filter",
   "title": "Cars Filter",
-  "description": "Carousel with team members",
+  "description": "Retrieve all Cars and filter them",
   "style": [ "file:./assets/styles/main.css" ],
   "category": "formatting",
   "icon": "admin-users",
